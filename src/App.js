@@ -84,6 +84,7 @@ function App() {
         <h3>Signup</h3>
         <div className="tableDiv">
           <table>
+            <tbody>
             <tr>
               <td>Username</td>
               <td><input type="text" onChange={(e) => setUserName(e.target.value)} value={userName}/></td>
@@ -100,6 +101,7 @@ function App() {
               <td>Password</td>
               <td><input type="password" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword}/></td>
             </tr>
+            </tbody>
           </table>
           <button type="button" onClick={handleSignUp}>Sign Up</button>
         </div>
@@ -111,10 +113,12 @@ function App() {
         <h3>Phone Number Verification</h3>
         <div className="tableDiv">
           <table>
+            <tbody>
             <tr>
               <td>OTP</td>
               <td><input type="text" onChange={(e) => setOtp(e.target.value)} value={otp}/></td>
             </tr>
+            </tbody>
           </table>
         </div>
         <div><button type="button" onClick={handleVerify}>Verify</button></div>
@@ -127,16 +131,20 @@ function App() {
         <h6>You can login with Email if it is verified or you can use Mobile number</h6>
         <div className="tableDiv">
         <table>
+          <tbody>
           <tr>
             <td>Mobile number</td>
             <td><input type="text" onChange={(e) => setLoginMobileNumber(e.target.value)} value={loginMobileNumber}/></td>
           </tr>
+          <tr>
             <td>Email</td>
             <td><input type="email" onChange={(e) => setLoginEmail(e.target.value)} value={loginEmail}/></td>
-          <tr></tr>
-            <td>Password</td>
+          </tr>
+          <tr>
+          <td>Password</td>
             <td><input type="password" onChange={(e) => setLoginPassword(e.target.value)} value={loginPassword} /></td>
-          <tr></tr>
+          </tr>
+          </tbody>
         </table>
         <button type="button" onClick={handleSignin}>Sign In</button>
         </div>
@@ -151,10 +159,12 @@ function App() {
         <button type="button" onClick={sendOtpToEmail}>send OTP to email</button></div>
         <div className="tableDiv">
           <table>
-            <tr>
-              <td>OTP</td>
-              <td><input type="text" onChange={(e) => setEmailOtp(e.target.value)} value={emailOtp}/></td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>OTP</td>
+                <td><input type="text" onChange={(e) => setEmailOtp(e.target.value)} value={emailOtp}/></td>
+              </tr>
+            </tbody>
           </table>
           <button type="button" onClick={verfiyEmail}>Verify</button>
         </div>
