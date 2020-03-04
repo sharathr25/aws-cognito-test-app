@@ -79,8 +79,9 @@ function App() {
       });
   }
 
-  const SignUp = () => (
-    <div className="container">
+  return (
+    <div className="App">
+      <div className="container">
         <h3>Signup</h3>
         <div className="tableDiv">
           <table>
@@ -106,10 +107,7 @@ function App() {
           <button type="button" onClick={handleSignUp}>Sign Up</button>
         </div>
       </div>
-  );
-
-  const MobileNumberVerification = () => (
-    <div className="container">
+      <div className="container">
         <h3>Phone Number Verification</h3>
         <div className="tableDiv">
           <table>
@@ -123,10 +121,7 @@ function App() {
         </div>
         <div><button type="button" onClick={handleVerify}>Verify</button></div>
       </div>
-  )
-
-  const Login = () => (
-    <div className="container">
+      <div className="container">
         <h3>Login</h3>
         <h6>You can login with Email if it is verified or you can use Mobile number</h6>
         <div className="tableDiv">
@@ -149,10 +144,7 @@ function App() {
         <button type="button" onClick={handleSignin}>Sign In</button>
         </div>
       </div>  
-  );
-
-  const EmailVerification = () => (
-    <div className="container">
+      <div className="container">
         <h3>Email Verification</h3>
         <h6>After login only email can be verified</h6>
         <div>
@@ -169,14 +161,6 @@ function App() {
           <button type="button" onClick={verfiyEmail}>Verify</button>
         </div>
       </div>
-  );
-
-  return (
-    <div className="App">
-      <SignUp />
-      <MobileNumberVerification />
-      <Login />
-      <EmailVerification />
     </div>
   );
 }
